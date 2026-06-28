@@ -1,43 +1,33 @@
 """
 Lock-In Guardian
-=================
-
 Watches your webcam. If it thinks you've been looking down (at your phone,
-presumably doomscrolling) continuously for too long, it pauses and plays
-your "lock in" video to snap you back to focus.
-
+probably doomscrolling) continuously for too long, it pauses and plays
+your "lock in" video to snap you back to focus. 
+You can adjust thresholds accordingly.
 HOW IT DETECTS "DOOMSCROLLING"
 -------------------------------
 Two signals have to agree before this calls it "doomscrolling":
-
-  1. HEAD POSE: MediaPipe FaceMesh + solvePnP estimates your head pitch.
+   HEAD POSE: MediaPipe FaceMesh + solvePnP estimates your head pitch.
      If it's tilted down past DOWN_PITCH_THRESHOLD_DEG, that's "looking down".
-  2. PHONE PRESENCE: A small YOLOv8 object detector (trained on COCO, which
+   PHONE PRESENCE: A small YOLOv8 object detector (trained on COCO, which
      includes a "cell phone" class) checks whether an actual phone is
      visible in frame.
-
-Only when BOTH are true, continuously (with small tolerance for blinks/
-occlusion), for DOOMSCROLL_SECONDS, do we trigger the video. This cuts out
+Only when BOTH are true, continuously we trigger the video. This cuts out
 a lot of false positives (e.g. reading a physical book, looking down at a
 laptop with no phone in view).
 
-Set ENABLE_PHONE_DETECTION = False if you'd rather go back to head-pose-only
+Set ENABLE_PHONE_DETECTION = False if you'd rather go back to head only
 (faster, but more false positives).
 
-This is still a proxy, not mind-reading — it can't tell *which app* you're
-in. Tune the thresholds below to taste.
-
+it can't tell *which app* you're in. Tune the thresholds below to taste.
 SETUP
 -----
     pip install opencv-python mediapipe numpy ultralytics
 
 First run will auto-download the yolov8n.pt weights (~6MB) from Ultralytics'
 servers, so you'll need internet access once.
-
 Then edit the CONFIG section below (especially VIDEO_PATH) and run:
-
     python lockin_guardian.py
-
 Press 'q' in the webcam window to quit.
 """
 
