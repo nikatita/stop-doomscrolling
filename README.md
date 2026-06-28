@@ -12,8 +12,8 @@ A Python productivity tool that uses your webcam to detect when you're looking d
 
 ## Demo
 
-<p align="center">
-  <img src="assets/demo.gif" width="500" alt="Lock-In Guardian Demo">
+<p>
+  <img src="assets/demo.gif" width="250" alt="Lock-In Guardian Demo">
 </p>
 
 ## Installation
