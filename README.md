@@ -11,7 +11,10 @@ A Python productivity tool that uses your webcam to detect when you're looking d
 - Press q in the webcam window to quit.
 
 ## Demo
-![Lock-In Guardian Demo](assets/demo.gif)
+
+<p align="center">
+  <img src="assets/demo.gif" width="500" alt="Lock-In Guardian Demo">
+</p>
 
 ## Installation
 
