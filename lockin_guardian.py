@@ -51,7 +51,7 @@ import numpy as np
 import mediapipe as mp
 from ultralytics import YOLO
 #enter yer vid lol
-VIDEO_PATH = "C:/Users/Nikita/Downloads/BITCH_LOCK_IN.mp4"
+VIDEO_PATH = "path/to/your/vid.mp4"
 DOOMSCROLL_SECONDS = 1.0
 DOWN_PITCH_THRESHOLD_DEG = 7.0
 FACE_LOST_GRACE_SECONDS = 2.0
