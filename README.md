@@ -1,6 +1,6 @@
 # Lock-In Guardian
 
-A Python productivity tool that uses your webcam to detect when you're looking down at your phone. If it detects doomscrolling for too long, it interrupts you by playing a lockin video of your choice.
+A productivity tool that uses your webcam to detect when you're looking down at your phone. If it detects doomscrolling for too long, it interrupts you by playing a lockin video of your choice.
 
 ## Features
 - Face tracking with MediaPipe
